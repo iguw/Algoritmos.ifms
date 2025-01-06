@@ -1,5 +1,5 @@
 import random
-from disciplinas import listar_disciplinas, disciplinas
+from disciplinas import listagem_disciplinas, disciplinas
 from professores import professores
 from alunos import alunos
 
