@@ -57,7 +57,8 @@ def cadastrar_professor():
         "email": email
     }
     professores.append(professor)
-    print(f"Professor {nome} cadastrado com sucesso!")
+    print(f"Professor {nome} adastrado com sucesso!, ID do Professor: {id_professor}")
+
 
 def cadastrar_disciplina():
     codigo = gerar_codigo_disciplina()
@@ -74,10 +75,11 @@ def cadastrar_disciplina():
         "codigo": codigo,
         "nome": nome,
         "carga_horaria": carga_horaria,
-        "professor": professor["id_professor"]
+        "professor": professor_id
     }
     disciplinas.append(disciplina)
-    print(f"Disciplina {nome} cadastrada com sucesso!")
+    print(f"Disciplina {nome} cadastrada com sucesso!, Código da Disciplina: {codigo}")
+
 
 def cadastrar_turma():
     nome_turma = input("Digite o nome da turma: ")
@@ -100,9 +102,9 @@ def cadastrar_turma():
         "alunos": []
     }
     turmas.append(turma)
-    print(f"Turma {nome_turma} cadastrada com sucesso!")
+    print(f"Turma {nome_turma} cadastrada com sucesso!, Código da Turma: {codigo_turma}")
 
-# Consultas
+
 def matricular_aluno_em_turma():
     if not alunos:
         print("Nenhum aluno cadastrado. Cadastre um aluno primeiro.")
@@ -138,6 +140,7 @@ def matricular_aluno_em_turma():
     turma_escolhida["alunos"].append(aluno)
     print(f"\nAluno {aluno['nome']} matriculado com sucesso na turma {turma_escolhida['nome']}.")
 
+#Consultas
 def consultar_alunos_na_turma():
     codigo_turma = input("Digite o código da turma para consultar os alunos: ")
     turma = next((t for t in turmas if t["codigo"] == codigo_turma), None)
@@ -168,8 +171,7 @@ def consultar_disciplinas_em_turma():
 
     print(f"\nDisciplina alocada na turma {turma['nome']}: {turma['disciplina']['nome']}")
 
-
-# Menu
+#Menu
 def menu():
     while True:
         print("\n--- Sistema Escolar ---")
