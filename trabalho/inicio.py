@@ -1,4 +1,0 @@
-alunos = []
-professores = []
-disciplinas = []
-turmas = []
