@@ -57,7 +57,7 @@ def cadastrar_professor():
         "email": email
     }
     professores.append(professor)
-    print(f"Professor {nome} adastrado com sucesso!, ID do Professor: {id_professor}")
+    print(f"Professor {nome} cadastrado com sucesso!, ID do Professor: {id_professor}")
 
 
 def cadastrar_disciplina():
