@@ -11,4 +11,4 @@ numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
 numeros_impares = list(filter(lambda x: x % 2 == 1, numeros))
 
 
-print(f'pares{numeros_pares}, impares{numeros_impares}')
+print(f'pares:{numeros_pares}', 'impares:{numeros_impares}')
