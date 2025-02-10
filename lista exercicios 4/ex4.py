@@ -5,6 +5,7 @@
 # indice_maior_elemento([1, 5, 3, 9, 2])
 # Saída Esperada:
 # 3 # O maior elemento é 9, que está no índice 3
+
 def indice_maior_elemento(lista, indice=0, max_indice=0):
     if indice == len(lista):
         return max_indice
