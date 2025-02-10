@@ -10,5 +10,4 @@ numeros = [1, 2, 3, 4, 5, 6]
 numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
 numeros_impares = list(filter(lambda x: x % 2 == 1, numeros))
 
-
 print(f'pares:{numeros_pares}', 'impares:{numeros_impares}')
