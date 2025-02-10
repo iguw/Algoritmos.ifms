@@ -8,7 +8,6 @@
 # Dica: Verifique se o elemento atual é uma lista ou um número para decidir se deve continuar a recursão.
 from functools import reduce
 
-
 def soma_lista_aninhada(lista):
     return reduce(lambda acc, x: acc + (soma_lista_aninhada(x) if isinstance(x, list) else x), lista, 0)
 
