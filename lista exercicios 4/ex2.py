@@ -6,7 +6,14 @@
 # Saída Esperada:
 # 15 # (1 + 2 + 3 + 4 + 5)
 # Dica: Verifique se o elemento atual é uma lista ou um número para decidir se deve continuar a recursão.
+from functools import reduce
 
-lista = [1, [2, 3], [4, [5]]]
 
-soma_lista_aninhada(lista)
+def soma_lista_aninhada(lista):
+    return reduce(lambda acc, x: acc + (soma_lista_aninhada(x) if isinstance(x, list) else x), lista, 0)
+
+listas_numeros = [1, [2, 3], [4, [5]]]
+
+resultado = soma_lista_aninhada(listas_numeros)
+
+print(resultado)
