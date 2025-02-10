@@ -13,6 +13,7 @@
 #  "João": 8.0,
 #  "Ana": 6.0
 # }
+
 from functools import reduce
 
 def media_ponderada(alunos):
